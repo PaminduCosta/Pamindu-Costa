@@ -1,0 +1,74 @@
+{
+    "HomePage": {
+        "title": "Web Developer",
+        "subtitle": "Crafting beautiful digital experiences",
+        "education": "Education",
+        "projects": "Projects",
+        "contact": "Contact",
+        "impact": {
+            "line2": "PIXEL-PERFECT DESIGNS,",
+            "line3": "BUILDING EXPERIENCES THAT MATTER.",
+            "line4": "TURNING IDEAS INTO REALITY",
+            "line5": "ONE COMPONENT AT A TIME."
+        },
+        "download_cv": "Resume",
+        "call_to_action": "Here's my old school Resume",
+        "name": "Pamindu Costa",
+        "location": "Colombo, Sri Lanka",
+        "sales_pitch1": "Creating precise, user-centric interfaces with ",
+        "sales_pitch2": "and modern UI/UX.",
+        "about1": "Hi",
+        "about2": ", I'm a 22 year old CS Undergraduate at SLIIT City Uni. A self-taught Next.js Dev with attention to small details, here to get into the job market.",
+        "projects_title": "Featured Projects",
+        "projects_description": "Explore my portfolio of innovative solutions and creative developments",
+        "projects_list": [
+            {
+                "title": "Portfolio Website",
+                "description": "Pamindu Costa portfolio version 1.0. Using Next.js, Tailwind CSS for styling, Framer Motion and gsap for animations, lenis for smooth scrolling. This website is a fully responsive mobile-first platform that will deliver the necessary info smoothly."
+            },
+            {
+                "title": "Bitto Website",
+                "status": "Under Construction",
+                "description": "An innovative mobile-first E-Commerce website designed to enhance sales, productivity and streamline workflows for my client who also has a 9 - 5 as well."
+            },
+            {
+                "title": "Vibe City",
+                "status": "Under Construction",
+                "description": "A passion project I started to build a small Game-Devlopment company. Hope I make it ;)"
+            }
+        ],
+        "Education_title": "Education",
+        "Education_description": "My academic journey and qualifications that laid the foundation for my engineering career",
+        "Education_list": [
+            {
+                "title": "Bachelor of Science in Computer Science",
+                "institution": "SLIIT City Uni",
+                "date": "2025 - Present",
+                "description": "Specialized in Computer Science and gives Social and Professional Project Management skills."
+            },
+            {
+                "title": "Higher Diploma in Information Technology",
+                "institution": "SLIIT City Uni",
+                "date": "2023 - 2025",
+                "description": "Focus on Information Technology. Built a strong foundation in algorithmic thinking."
+            },
+            {
+                "title": "GCE A/L",
+                "institution": "Pannipitiya Dharmapala Vidyalaya",
+                "date": "2020 - 2022",
+                "description": "Studied Combined Mathematics with ICT and Physics."
+            },
+            {
+                "title": "GCE O/L",
+                "institution": "Hanwella Rajasinghe Central Collage",
+                "date": "2019",
+                "description": "Studied the local sylubus and passed the exam with flying colors."
+            }
+        ],
+        "technologies": "Technologies",
+        "technologies_description": "Tools and technologies I work with to bring ideas to life",
+        "contact_me": "Contact Me",
+        "contact_description": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your company.",
+        "say_hello": "Say Hello"
+    }
+}
