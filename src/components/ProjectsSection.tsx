@@ -20,18 +20,21 @@ export const ProjectsSection = () => {
             title: t("projects_list.0.title"),
             description: t("projects_list.0.description"),
             imageUrl: "./p2.png",
+            mobileImageUrl: "./p2_mobile.png",
         },
         {
             title: t("projects_list.1.title"),
             status: t("projects_list.1.status"),
             description: t("projects_list.1.description"),
             imageUrl: "./p3.png",
+            mobileImageUrl: "./p3_mobile.png",
         },
         {
             title: t("projects_list.2.title"),
             status: t("projects_list.2.status"),
             description: t("projects_list.2.description"),
             imageUrl: "./p42.png",
+            mobileImageUrl: "./p42_mobile.png",
         },
     ];
 

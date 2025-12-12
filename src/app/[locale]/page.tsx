@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { MobileHero } from "@/components/MobileHero";
 import { ImpactSection } from "@/components/ImpactSection";
 import { ScrollTransitionWrapper } from "../../components/ScrollTransitionWrapper";
 import { CurvyLinesBackground } from "../../components/CurvyLinesBackground";
@@ -17,9 +18,14 @@ export default function Home() {
                 <CurvyLinesBackground />
             </div>
             <Navbar />
-            <ScrollTransitionWrapper>
-                <Hero />
-            </ScrollTransitionWrapper>
+            <div className="hidden md:block">
+                <ScrollTransitionWrapper>
+                    <Hero />
+                </ScrollTransitionWrapper>
+            </div>
+            <div className="block md:hidden">
+                <MobileHero />
+            </div>
             <div className="relative z-10">
                 <ImpactSection />
             </div>

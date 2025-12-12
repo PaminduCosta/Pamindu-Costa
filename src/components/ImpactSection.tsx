@@ -15,7 +15,7 @@ export function ImpactSection() {
         offset: ["start end", "end start"]
     });
 
-    const lines = ['line2', 'line3', 'line4', 'line5'] as const;
+    const lines = ['line1', 'line2', 'line3', 'line4'] as const;
 
     return (
         <section ref={containerRef} className="min-h-screen relative flex items-center justify-center overflow-hidden py-20">
@@ -26,24 +26,25 @@ export function ImpactSection() {
                     {lines.map((line, index) => (
                         <div key={line} className="overflow-hidden">
                             <motion.h2
-                                initial={{ y: 100, opacity: 0 }}
+                                initial={{ y: "100%", opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.1 }}
+                                viewport={{ once: true }}
                                 transition={{
                                     duration: 0.8,
                                     delay: index * 0.1,
                                     ease: [0.65, 0.05, 0, 1]
                                 }}
                                 className={`
-                  font-bold uppercase tracking-tighter
-                  ${isSinhala ? 'leading-tight py-2' : 'leading-[0.9]'}
-                  ${index === 2 || index === 3
+                  font-bold uppercase 
+                  ${isSinhala ? 'tracking-normal leading-[1.3] pb-4' : 'tracking-tighter leading-[0.9]'}
+                  ${index === 1 || index === 3
                                         ? 'text-transparent bg-clip-text bg-gradient-to-r from-light-secondary to-light-primary dark:from-dark-primary dark:to-purple-400'
                                         : 'text-light-accent dark:text-dark-text'}
-                  ${isSinhala
-                                        ? 'text-base sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl'
+                 ${isSinhala
+                                        ? 'text-lg sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl'
                                         : 'text-lg sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl'}
                 `}
+                                style={{ fontFamily: isSinhala ? 'var(--font-noto-sinhala)' : undefined }}
                             >
                                 {t(line)}
                             </motion.h2>

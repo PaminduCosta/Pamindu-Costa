@@ -8,9 +8,10 @@ interface ProjectCardProps {
     status?: string;
     description: string;
     imageUrl: string;
+    mobileImageUrl?: string;
 }
 
-export const ProjectCard = ({ title, status, description, imageUrl }: ProjectCardProps) => {
+export const ProjectCard = ({ title, status, description, imageUrl, mobileImageUrl }: ProjectCardProps) => {
     const [showOverlay, setShowOverlay] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
     const [mounted, setMounted] = useState(false);
@@ -34,10 +35,17 @@ export const ProjectCard = ({ title, status, description, imageUrl }: ProjectCar
             >
                 {/* Hero Image - Clean and unobstructed */}
                 <div className="absolute inset-0">
+                    {/* Mobile Image */}
+                    <img
+                        src={mobileImageUrl || imageUrl}
+                        alt={description}
+                        className="w-full h-full object-cover md:hidden"
+                    />
+                    {/* Desktop Image */}
                     <img
                         src={imageUrl}
                         alt={description}
-                        className="w-full h-full object-cover transition-transform duration-1000 ease-out md:group-hover:scale-105"
+                        className="hidden md:block w-full h-full object-cover transition-transform duration-1000 ease-out md:group-hover:scale-105"
                     />
                 </div>
                 {/* Description overlay - slides up on hover (desktop) or tap (mobile) */}
@@ -64,7 +72,7 @@ export const ProjectCard = ({ title, status, description, imageUrl }: ProjectCar
                             {title}
                         </h3>
                         <div className="w-16 md:w-20 h-1 bg-white/40 mx-auto"></div>
-                        <p>{status}</p>
+                        <p className="text-white/80 uppercase tracking-widest text-sm font-medium">{status}</p>
                         <p className="text-base md:text-lg lg:text-2xl text-white/90 leading-relaxed">
                             {description}
                         </p>

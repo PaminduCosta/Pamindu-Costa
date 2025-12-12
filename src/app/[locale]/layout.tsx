@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_Sinhala } from "next/font/google";
 import { getMessages } from 'next-intl/server';
 import { Providers } from "@/components/Providers";
 import "../globals.css";
@@ -12,6 +12,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
+});
+
+const notoSinhala = Noto_Sans_Sinhala({
+    variable: "--font-noto-sinhala",
+    subsets: ["sinhala"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +38,7 @@ export default async function RootLayout({
         <html lang={locale} suppressHydrationWarning>
             <body
                 suppressHydrationWarning
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} ${notoSinhala.variable} antialiased`}
             >
                 <Providers messages={messages} locale={locale} timeZone="Asia/Colombo">
                     {children}
